@@ -1,21 +1,38 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Container, Col, Row } from 'react-bootstrap'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Image from '../components/image'
+import Typer from '../components/typer'
+import Img from '../components/image'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage: React.FC = () => {
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div className="position-relative">
+        <section className="section section-md section-img">
+          <Img />
+          <Container className="d-flex align-items-center py-lg">
+            <Col className="px-0">
+              <Row className="align-items-center justify-content-center">
+                <Col lg={6} className="text-center">
+                  <Typer className="sky-font" dataText={["Hi, I'm Richard"]} />
+                </Col>
+              </Row>
+            </Col>
+          </Container>
+        </section>
+      </div>
+      <div id="section-main" className="section-main section-scroll">
+        <div id="me" className="section">
+          <Container>
+            <div className="title">About me</div>
+          </Container>
+        </div>
+      </div>
+    </Layout>
+  )
+}
 
 export default IndexPage
