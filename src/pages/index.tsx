@@ -16,8 +16,15 @@ const IndexPage: React.FC = () => {
           <Container className="d-flex align-items-center py-lg">
             <Col className="px-0">
               <Row className="align-items-center justify-content-center">
-                <Col lg={6} className="text-center">
-                  <Typer className="sky-font" dataText={["Hi, I'm Richard"]} />
+                <Col lg={8} className="text-center">
+                  <Typer
+                    className="image-font"
+                    dataText={[
+                      "Hi, I'm Richard.",
+                      'a Python lover.',
+                      'a Javascript fan.'
+                    ]}
+                  />
                 </Col>
               </Row>
             </Col>

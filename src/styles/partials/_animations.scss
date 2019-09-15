@@ -11,3 +11,79 @@
 .fadeIn {
   animation: fadeIn;
 }
+
+@-webkit-keyframes slide-in {
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84) both,
+    slide-in 0.5s;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84) both,
+    slide-in 0.5s;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.blinking {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 15px solid #fdfdfd;
+  animation: blinking 1s step-end infinite;
+  -webkit-animation: blinking 1s step-end infinite;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

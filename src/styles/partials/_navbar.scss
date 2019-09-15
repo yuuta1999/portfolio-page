@@ -12,11 +12,7 @@
   .navbar-brand {
     color: #fdfdfd;
 
-    &:hover {
-      color: #ddd;
-    }
-
-    &:focus {
+    @include hover-focus {
       color: #ddd;
     }
   }
@@ -25,10 +21,18 @@
     .show {
       > .nav-link {
         color: #ddd;
+
+        &:after {
+          color: #fdfdfd;
+        }
       }
     }
     .nav-link {
       color: #fdfdfd;
+
+      @include hover-focus {
+        color: #fdfdfd;
+      }
 
       &:hover {
         color: #ddd;
@@ -67,8 +71,8 @@
     .nav-link {
       color: rgba(0, 0, 0, 0.9);
 
-      &:hover {
-        color: rgba(0, 0, 0, 0.5);
+      @include hover-focus {
+        color: rgba(0, 0, 0, 0.9);
       }
     }
   }
