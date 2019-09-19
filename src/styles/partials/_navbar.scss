@@ -1,51 +1,126 @@
 .navbar {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  transition: background-color 0.2s ease 0.2s;
 }
 
-.nav-link {
-  font-weight: 600;
+.navbar-brand {
+  font-size: $font-size-base;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar-nar {
+  .nav-link {
+    font-size: $navbar-nav-link-font-size;
+  }
 }
 
 .navbar-light {
   .navbar-brand {
-    color: #fdfdfd;
+    color: $white;
 
     @include hover-focus {
-      color: #ddd;
+      color: $gray-200;
     }
   }
 
   .navbar-nav {
-    .show {
-      > .nav-link {
-        color: #ddd;
+    .nav-link {
+      color: $white;
 
-        &:after {
-          color: #fdfdfd;
+      @include hover-focus {
+        color: $navbar-light-hover-color;
+      }
+
+      &.nav-link__underline:after {
+        display: block;
+        content: '';
+        border-bottom: $navbar-light-toggler-hover-thin-border-color;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: -webkit-transform 200ms ease-in-out;
+        transition: transform 200ms ease-in-out;
+      }
+
+      &.nav-link__underline:hover:after {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+
+      &.nav-link__underline.active:after {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-light-active-color;
+    }
+  }
+
+  // Hamburger menu when navbar is transparent
+  .navbar-toggle-hamburger {
+    background: transparent;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+
+    &.toggled {
+      .circle {
+        :nth-child(1) {
+          top: 48%;
+          transform: rotate(45deg);
+        }
+
+        :nth-child(2) {
+          transform: rotate(-45deg);
+        }
+
+        :nth-child(3) {
+          top: 48%;
+          transform: rotate(-45deg);
         }
       }
     }
-    .nav-link {
-      color: #fdfdfd;
 
-      @include hover-focus {
-        color: #fdfdfd;
+    .circle {
+      width: 2rem;
+      height: 2rem;
+      position: relative;
+
+      :nth-child(1) {
+        top: 18%;
       }
 
-      &:hover {
-        color: #ddd;
+      :nth-child(2) {
+        top: 48%;
+      }
+
+      :nth-child(3) {
+        top: 78%;
+      }
+
+      span {
+        height: 3px;
+        border-radius: 2px;
+        width: 100%;
+        display: block;
+        background: $white;
+        position: absolute;
+        transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s, background 0s;
       }
     }
   }
-}
 
-.navbar-brand {
-  font-size: $font-size-sm;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  .navbar-toggler {
+    color: $white;
+    border: $navbar-light-toggler-none-border-color;
+  }
 }
 
 .navbar-shrink {
@@ -54,25 +129,98 @@
   transition: padding 0.4s linear;
   box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
 
-  .navbar-brand {
-    color: rgba(0, 0, 0, 0.9);
+  .navbar-toggle-hamburger {
+    background: transparent;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
 
-    &:hover {
-      color: rgba(0, 0, 0, 0.5);
+    &.toggled {
+      .circle {
+        :nth-child(1) {
+          top: 48%;
+          transform: rotate(45deg);
+        }
+
+        :nth-child(2) {
+          transform: rotate(-45deg);
+        }
+
+        :nth-child(3) {
+          top: 48%;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    .circle {
+      width: 2rem;
+      height: 2rem;
+      position: relative;
+
+      :nth-child(1) {
+        top: 18%;
+      }
+
+      :nth-child(2) {
+        top: 48%;
+      }
+
+      :nth-child(3) {
+        top: 78%;
+      }
+
+      span {
+        height: 3px;
+        border-radius: 2px;
+        width: 100%;
+        display: block;
+        background: $gray-600;
+        position: absolute;
+        transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s, background 0s;
+      }
+    }
+  }
+
+  .navbar-brand {
+    color: $navbar-dark-color;
+
+    @include hover-focus {
+      color: $navbar-dark-hover-color;
     }
   }
 
   .navbar-nav {
     .show {
       > .nav-link {
-        color: rgba(0, 0, 0, 0.5);
+        color: $navbar-dark-color;
+
+        &:after {
+          color: $navbar-dark-hover-color;
+        }
       }
     }
     .nav-link {
-      color: rgba(0, 0, 0, 0.9);
+      color: $navbar-dark-color;
 
       @include hover-focus {
-        color: rgba(0, 0, 0, 0.9);
+        color: $navbar-dark-hover-color;
+      }
+
+      &.nav-link__underline:after {
+        display: block;
+        content: '';
+        border-bottom: $navbar-dark-toggler-hover-thin-border-color;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: -webkit-transform 200ms ease-in-out;
+        transition: transform 200ms ease-in-out;
+      }
+
+      &.nav-link__underline:hover:after {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
       }
     }
   }
@@ -81,4 +229,15 @@
 .transparent {
   transition: background-color 0.2s ease 0.2s;
   transition: padding 0.4s linear;
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar-expand-lg {
+    .navbar-nav {
+      .nav-link {
+        padding-right: $navbar-nav-link-padding-y;
+        padding-left: $navbar-nav-link-padding-y;
+      }
+    }
+  }
 }

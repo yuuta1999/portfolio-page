@@ -4,6 +4,7 @@ import Slider from './slider'
 
 const Typer: React.FC<TyperProps> = ({
   title = '',
+  dataTitle = [],
   dataText,
   className
 }: TyperProps) => {
@@ -19,11 +20,7 @@ const Typer: React.FC<TyperProps> = ({
   // Define some stuffs
   const i: number = loop % dataText.length
   const fullText: string = dataText[i]
-  const str: string[] = [
-    'a self-taught coder with huge curiosity about tech.',
-    'I write stuff in Flask and Django.',
-    'I visualize my stuff with HTML/CSS and React.'
-  ]
+  const str: string[] = dataTitle.length > 0 ? dataTitle : ['']
 
   const handleScroll = () => {
     const currentHeight =
@@ -81,6 +78,12 @@ const Typer: React.FC<TyperProps> = ({
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  })
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       handleTyping()
     }, speed)
@@ -106,6 +109,7 @@ interface TyperProps {
   dataText: string[]
   title?: string
   className: string
+  dataTitle?: string[]
 }
 
 export default Typer

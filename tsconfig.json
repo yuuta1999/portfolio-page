@@ -8,7 +8,8 @@
     "noImplicitAny": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "noUnusedLocals": false
+    "noUnusedLocals": false,
+    "typeRoots": ["./node_modules/@types", "./@types"]
   },
   "exclude": ["node_modules", "public", ".cache"]
 }

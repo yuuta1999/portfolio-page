@@ -1,7 +1,10 @@
-import { Link } from 'gatsby'
 import React, { useState, useEffect } from 'react'
+import { Link } from 'gatsby'
+import TransitionLink from 'gatsby-plugin-transition-link'
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import classnames from 'classnames'
+
+import Hamburger from './styled/hamburger-menu'
 
 const Header: React.FC = () => {
   const [transparent, setTransparent] = useState(true)
@@ -21,6 +24,9 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
   })
 
   return (
@@ -41,14 +47,26 @@ const Header: React.FC = () => {
           >
             Richard Ng•
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <Hamburger />
+          </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link as={Link} to="/me">
+              <Nav.Link
+                className="nav-link__underline"
+                as={Link}
+                activeClassName="active"
+                to="/me"
+              >
                 Me
               </Nav.Link>
-              <Nav.Link as={Link} to="/projects">
-                Projects
+              <Nav.Link
+                className="nav-link__underline"
+                as={TransitionLink}
+                activeClassName="active"
+                to="/projects"
+              >
+                Blogs
               </Nav.Link>
               <NavDropdown title="More" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

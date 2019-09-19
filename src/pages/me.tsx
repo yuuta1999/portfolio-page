@@ -1,16 +1,15 @@
 import React from 'react'
 import { Container, Col, Row } from 'react-bootstrap'
 
-import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Typer from '../components/typer'
 import Img from '../components/image'
+import Typer from '../components/typer'
 
-const IndexPage: React.FC = () => {
+const About: React.FC = () => {
   return (
     <>
-      <SEO title="Home" />
-      <div className="position-relative">
+      <SEO title="About me" />
+      <div className="position-relarive">
         <section className="section section-md section-img">
           <Img />
           <Container className="d-flex align-items-center py-lg">
@@ -19,16 +18,8 @@ const IndexPage: React.FC = () => {
                 <Col lg={8} className="text-center">
                   <Typer
                     className="image-font"
-                    dataText={[
-                      "Hi, I'm Richard.",
-                      'I love Python.',
-                      'and Javascript too.'
-                    ]}
-                    dataTitle={[
-                      'a self-taught coder with huge curiosity about tech.',
-                      'I write stuff in Flask and Django.',
-                      'I visualize my stuff with HTML/CSS and React.'
-                    ]}
+                    dataText={['Me, Myself and I']}
+                    dataTitle={['Everything about myself']}
                   />
                 </Col>
               </Row>
@@ -36,15 +27,15 @@ const IndexPage: React.FC = () => {
           </Container>
         </section>
       </div>
-      <section id="section-main" className="section-main section-scroll">
+      <div id="section-main" className="section-main section-scroll">
         <div id="me" className="section">
           <Container>
             <div className="title">About me</div>
           </Container>
         </div>
-      </section>
+      </div>
     </>
   )
 }
 
-export default IndexPage
+export default About

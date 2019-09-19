@@ -1,5 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
 
+/** 
+ * Infrastructure like Bootstrap itself.
+ * I just changed, added or removed something.
+ * To understand how Bootstrap organized their source code:
+ * https://github.com/twbs/bootstrapz
+ */
+
+@import './partials/variables';
 @import './partials/navbar';
 @import './partials/sections';
 @import './partials/text';
@@ -9,5 +17,11 @@
 @media (min-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+}
+
+button {
+  &:focus {
+    outline: none;
   }
 }

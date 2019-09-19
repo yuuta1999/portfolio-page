@@ -1,0 +1,99 @@
+// Fonts
+$font-family-base: -apple-system, 'Helvetica Neue', Arial, 'Noto Sans',
+  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji' !default;
+$font-family-alt: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+
+$font-size-base: 1rem !default;
+$font-size-xl: ($font-size-base * 1.5);
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-md: ($font-size-base * 0.75);
+$font-size-sm: ($font-size-base * 0.5);
+
+$font-weight-thin: 200 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-extreme-bold: 800 !default;
+$font-weight-black: 900 !default;
+
+// Color
+$white: #fff !default;
+$gray-100: #f6f9fc !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #8898aa !default;
+$gray-700: #525f7f !default;
+$gray-800: #32325d !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    '100': $gray-100,
+    '200': $gray-200,
+    '300': $gray-300,
+    '400': $gray-400,
+    '500': $gray-500,
+    '600': $gray-600,
+    '700': $gray-700,
+    '800': $gray-800,
+    '900': $gray-900
+  ),
+  $grays
+);
+
+$green-100: #7cfc00 !default;
+$green-200: #7fff00 !default;
+$green-300: #00ff00 !default;
+$green-400: #32cd32 !default;
+$green-500: #228b22 !default;
+$green-600: #008000 !default;
+$green-700: #006400 !default;
+$green-spotify: #1db954 !default;
+$green-starbuck: #00704a !default;
+
+$greens: () !default;
+$greens: map-merge(
+  (
+    '100': $green-100
+  ),
+  $greens
+);
+
+// Navbar
+$navbar-light-bg: transparent !default;
+$navbar-light-hover-bg: rgba(0, 0, 0, 0.1);
+$navbar-light-active-bg: rgba(0, 0, 0, 0.1);
+$navbar-light-color: rgba($white, 0.5);
+$navbar-light-hover-color: rgba($white, 0.85);
+$navbar-light-active-color: rgba($white, 0.65);
+$navbar-light-disable-color: rgba($white, 0.55);
+$navbar-light-toggler-none-border-color: none !default;
+$navbar-light-toggler-hover-thin-border-color: 2px solid
+  $navbar-light-hover-color !default;
+
+$navbar-dark-bg: transparent !default;
+$navbar-dark-hover-bg: rgba(255, 255, 255, 0.1);
+$navbar-dark-active-bg: rgba(255, 255, 255, 0.1);
+$navbar-dark-color: rgba($black, 0.55);
+$navbar-dark-hover-color: rgba($black, 0.95);
+$navbar-dark-active-color: rgba($black, 0.95);
+$navbar-dark-disable-color: rgba($black, 0.25);
+$navbar-dark-toggler-none-border-color: none !default;
+$navbar-dark-toggler-hover-thin-border-color: 2px solid $navbar-dark-hover-color !default;
+
+$navbar-nav-link-padding-x: 1rem !default;
+$navbar-nav-link-padding-y: 1rem !default;
+
+$navbar-nav-link-font-family: $font-family-base !default;
+$navbar-nav-link-font-size: 0.9rem !default;
+$navbar-nav-link-font-weight: 600 !default;
+$navbar-nav-link-letter-spacing: 0 !default;
