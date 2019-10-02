@@ -1,0 +1,10 @@
+body {
+  font-family: $font-family-system;
+  @include font-size($font-size-base);
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}

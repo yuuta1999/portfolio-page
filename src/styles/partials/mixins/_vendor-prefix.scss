@@ -1,0 +1,18 @@
+/** 
+ * Vendor prefixes for browser rendering engine
+ *
+ * -webkit-: For Safari, Chrome
+ * -o-: For Opera
+ * -moz-: For Mozilla Firefox
+ * -ms-: For Microsoft IE
+ *
+ * This is a part of mixins. Import in ../_mixins.scss
+*/
+
+@mixin transform-translate3d-y($value) {
+  transform: translate3d(0, $value, 0) !important;
+  -webkit-transform: translate3d(0, $value, 0) !important;
+  -o-transform: translate3d(0, $value, 0) !important;
+  -ms-transform: translate3d(0, $value, 0) !important;
+  -moz-transform: translate3d(0, $value, 0) !important;
+}

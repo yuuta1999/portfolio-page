@@ -19,16 +19,8 @@ const IndexPage: React.FC = () => {
                 <Col lg={8} className="text-center">
                   <Typer
                     className="image-font"
-                    dataText={[
-                      "Hi, I'm Richard.",
-                      'I love Python.',
-                      'and Javascript too.'
-                    ]}
-                    dataTitle={[
-                      'a self-taught coder with huge curiosity about tech.',
-                      'I write stuff in Flask and Django.',
-                      'I visualize my stuff with HTML/CSS and React.'
-                    ]}
+                    dataText={["Hi, I'm Richard."]}
+                    dataTitle={["I'm teaching myself about tech."]}
                   />
                 </Col>
               </Row>

@@ -31,7 +31,7 @@ const Slider: React.FC<SliderProps> = ({
       () => {
         handleChange()
       },
-      text === '' ? 10 : 6500
+      text === '' ? 10 : 14500
     )
     return () => clearTimeout(timer)
   }, [textRef, text, dataText])

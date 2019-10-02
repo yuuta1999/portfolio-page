@@ -68,7 +68,7 @@ const Typer: React.FC<TyperProps> = ({
       setTimeout(() => {
         setIsShowing(false)
         setIsDeleting(true)
-      }, 7000)
+      }, 15000)
     } else if (isDeleting && isScrolled && text === '') {
       setIsDeleting(false)
       setLoop(loop + 1)

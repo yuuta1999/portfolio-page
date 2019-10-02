@@ -1,5 +1,5 @@
 // Fonts
-$font-family-base: -apple-system, 'Helvetica Neue', Arial, 'Noto Sans',
+$font-family-system: -apple-system, 'Helvetica Neue', Arial, 'Noto Sans',
   sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
   'Noto Color Emoji' !default;
 $font-family-alt: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -97,3 +97,12 @@ $navbar-nav-link-font-family: $font-family-base !default;
 $navbar-nav-link-font-size: 0.9rem !default;
 $navbar-nav-link-font-weight: 600 !default;
 $navbar-nav-link-letter-spacing: 0 !default;
+
+// Border
+$border-radius: $spacer * 0.25;
+
+// Keyframes - transition:
+$transition-collapse-height: height 0.35s ease !default;
+$transition-collapse-width: width 0.35s ease !default;
+$transition-collapse-navbar: $transition-collapse-height,
+  $transition-collapse-width;

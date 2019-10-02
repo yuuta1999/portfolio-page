@@ -6,6 +6,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-transition-link`,
       options: {
         layout: require.resolve(`./src/components/layout.tsx`)
