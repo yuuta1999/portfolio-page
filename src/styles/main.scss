@@ -21,3 +21,14 @@
     max-width: 960px;
   }
 }
+
+// Fix gatsby-transition-link-plugin default style
+main {
+  .tl-edges {
+    overflow-x: unset;
+  }
+
+  .tl-wrapper {
+    float: unset;
+  }
+}

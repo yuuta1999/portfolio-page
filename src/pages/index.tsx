@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Col, Row } from 'react-bootstrap'
 
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Typer from '../components/typer'
 import Img from '../components/image'
@@ -20,7 +19,7 @@ const IndexPage: React.FC = () => {
                   <Typer
                     className="image-font"
                     dataText={["Hi, I'm Richard."]}
-                    dataTitle={["I'm teaching myself about tech."]}
+                    dataTitle={['I wrote about myself in this site']}
                   />
                 </Col>
               </Row>

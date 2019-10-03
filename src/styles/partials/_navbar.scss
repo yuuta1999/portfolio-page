@@ -21,7 +21,7 @@
     color: $white;
 
     @include hover-focus {
-      color: $gray-200;
+      color: $white;
     }
   }
 
@@ -193,7 +193,7 @@
     color: $navbar-dark-color;
 
     @include hover-focus {
-      color: $navbar-dark-hover-color;
+      color: $navbar-dark-color;
     }
   }
 
