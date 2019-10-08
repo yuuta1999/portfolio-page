@@ -1,0 +1,24 @@
+.card {
+  position: relative;
+}
+
+.card-profile {
+  .card-profile-image {
+    position: relative;
+    //min-height: 130px;
+
+    img {
+      max-width: 120px;
+      border-radius: $border-radius;
+      @extend .shadow;
+      transform: translate(-50%, -30%);
+      position: absolute;
+      left: 50%;
+      transition: $transition-base;
+
+      &:hover {
+        transform: translate(-50%, -33%);
+      }
+    }
+  }
+}

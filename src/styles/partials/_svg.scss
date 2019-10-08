@@ -1,0 +1,324 @@
+// For GITHUB only
+
+svg {
+  overflow: visible;
+
+  #twitter,
+  #twitter-circle {
+    transform-origin: center;
+    animation: animate-out 0.3s linear forwards;
+  }
+
+  #linkedin,
+  #linkedin-circle {
+    transform-origin: center;
+    animation: animate-out 0.3s linear forwards;
+  }
+
+  #animate-twitter-circle {
+    transform-origin: 20px 20.13px;
+  }
+
+  #animate-linkedin-circle {
+    transform-origin: 20px 20px;
+  }
+
+  #github {
+    transform-origin: center;
+    animation: animate-out 0.3s linear forwards;
+  }
+
+  #animate-github-circle {
+    transform-origin: 16.5px 16.5px;
+  }
+}
+
+a#linkedin-btn:hover {
+  svg {
+    #linkedin {
+      transform: scale(4);
+      animation: animate-in 0.3s linear forwards 0.25s,
+        animate-linkedin 0.3s linear forwards 0.3s;
+    }
+
+    #linkedin-circle {
+      transform: scale(0.2);
+      fill: #069;
+      animation: animate-in 0.3s linear forwards 0.25s;
+    }
+
+    #animate-linkedin-circle {
+      transition: all 2s;
+      animation: animate-linkedin-circle 0.3s linear forwards;
+      opacity: 1;
+    }
+  }
+}
+
+a#twitter-btn:hover {
+  svg {
+    #twitter {
+      transform: scale(0.2);
+      animation: animate-in 0.3s linear forwards 0.25s,
+        animate-twitter 0.3s linear forwards 0.3s;
+    }
+
+    #twitter-circle {
+      transform: scale(0.2);
+      fill: #1da1f2;
+      animation: animate-in 0.3s linear forwards 0.25s;
+    }
+
+    #animate-twitter-circle {
+      transition: all 2s;
+      animation: animate-twitter-circle 0.3s linear forwards;
+      opacity: 1;
+    }
+  }
+}
+
+a#github-btn:hover {
+  svg {
+    #github {
+      transform: scale(0.2);
+      fill: #191717;
+      animation: animate-in 0.3s linear forwards 0.25s;
+    }
+
+    #animate-github-circle {
+      transition: all 2s;
+      animation: animate-github-circle 0.3s linear forwards;
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes animate-out {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animate-in {
+  0% {
+    transform: scale(0.2);
+  }
+  40% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes animate-twitter {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animate-linkedin {
+  0% {
+    -webkit-transform: scale(3);
+    transform: scale(3);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: scale(1.24);
+    transform: scale(1.24);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  89% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes animate-linkedin-circle {
+  40% {
+    transform: scale(5);
+    opacity: 1;
+    fill: #005073;
+  }
+  55% {
+    transform: scale(6);
+    opacity: 1;
+    fill: #107dac;
+  }
+  65% {
+    transform: scale(7);
+    opacity: 1;
+    fill: #189ad3;
+  }
+  75% {
+    transform: scale(8);
+    opacity: 1;
+    fill: transparent;
+    stroke: #189ad3;
+    stroke-width: 0.5;
+  }
+  85% {
+    transform: scale(9);
+    opacity: 1;
+    fill: transparent;
+    stroke: #1ebbd7;
+    stroke-width: 0.2;
+  }
+  95% {
+    transform: scale(10);
+    opacity: 1;
+    fill: transparent;
+    stroke: #1ebbd7;
+    stroke-width: 0.1;
+  }
+  100% {
+    transform: scale(11);
+    opacity: 1;
+    fill: transparent;
+    stroke: #71c7ec;
+    stroke-width: 0;
+  }
+}
+
+@keyframes animate-twitter-circle {
+  40% {
+    transform: scale(5);
+    opacity: 1;
+    fill: #0c3953;
+  }
+  55% {
+    transform: scale(6);
+    opacity: 1;
+    fill: #094c72;
+  }
+  65% {
+    transform: scale(7);
+    opacity: 1;
+    fill: #0558ac;
+  }
+  75% {
+    transform: scale(8);
+    opacity: 1;
+    fill: transparent;
+    stroke: #026aa7;
+    stroke-width: 0.5;
+  }
+  85% {
+    transform: scale(9);
+    opacity: 1;
+    fill: transparent;
+    stroke: #026aa7;
+    stroke-width: 0.2;
+  }
+  95% {
+    transform: scale(10);
+    opacity: 1;
+    fill: transparent;
+    stroke: #0079bf;
+    stroke-width: 0.1;
+  }
+  100% {
+    transform: scale(11);
+    opacity: 1;
+    fill: transparent;
+    stroke: #0079bf;
+    stroke-width: 0;
+  }
+}
+
+@keyframes animate-github-circle {
+  40% {
+    transform: scale(5);
+    opacity: 1;
+    fill: #dd4688;
+  }
+  55% {
+    transform: scale(6);
+    opacity: 1;
+    fill: #d46abf;
+  }
+  65% {
+    transform: scale(7);
+    opacity: 1;
+    fill: #cc8ef5;
+  }
+  75% {
+    transform: scale(8);
+    opacity: 1;
+    fill: transparent;
+    stroke: #cc8ef5;
+    stroke-width: 0.5;
+  }
+  85% {
+    transform: scale(9);
+    opacity: 1;
+    fill: transparent;
+    stroke: #cc8ef5;
+    stroke-width: 0.2;
+  }
+  95% {
+    transform: scale(10);
+    opacity: 1;
+    fill: transparent;
+    stroke: #cc8ef5;
+    stroke-width: 0.1;
+  }
+  100% {
+    transform: scale(11);
+    opacity: 1;
+    fill: transparent;
+    stroke: #cc8ef5;
+    stroke-width: 0;
+  }
+}

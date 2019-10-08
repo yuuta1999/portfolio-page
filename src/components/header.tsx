@@ -46,7 +46,7 @@ const Header: React.FC = () => {
             to="/"
             className={classnames({ dark: !transparent })}
           >
-            <Logo width={30} style={{ margin: '0 1rem' }} />
+            <Logo width={30} style={{ marginRight: '1rem' }} />
             Richard Ng
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
