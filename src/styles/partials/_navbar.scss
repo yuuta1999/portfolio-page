@@ -265,8 +265,8 @@
   .navbar-expand-lg {
     .navbar-nav {
       .nav-link {
-        padding-right: $navbar-nav-link-padding-y;
-        padding-left: $navbar-nav-link-padding-y;
+        padding-right: 0;
+        padding-left: $navbar-nav-link-padding-y * 3;
       }
 
       .dropdown-menu {

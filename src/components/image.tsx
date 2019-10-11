@@ -20,7 +20,7 @@ const Image: React.FC = () => {
       fluid={data.placeHolderImage.childImageSharp.fluid}
       style={{
         position: 'absolute',
-        height: '90vh'
+        height: '100vh'
       }}
     />
   )
